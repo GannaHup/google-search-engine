@@ -1,0 +1,10 @@
+.wrapper-text-input {
+  @apply w-full;
+  @apply py-2 px-2.5;
+  @apply rounded-lg;
+  @apply border border-gray-300;
+
+  input {
+    @apply outline-none;
+  }
+}

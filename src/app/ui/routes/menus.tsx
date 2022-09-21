@@ -1,40 +1,14 @@
-import MainPage from '@/app/ui/views/Apps'
+import HomePage from '@/app/ui/views/Home/index'
 
 const PATH = {
   HOME: '/',
-  ABOUT: '/about',
-  PROJECTS: '/projects',
-  CERTIFICATES: '/certificates'
 }
 
 export const MenuRoutes = [
   {
     path: PATH.HOME,
     name: 'Home',
-    component: MainPage,
+    component: HomePage,
     exact: true,
   },
-]
-
-export const MenuSidebar = [
-  {
-    path: PATH.HOME,
-    label: `I'm Ganna`,
-    icon: 'cubes',
-  },
-  {
-    path: PATH.ABOUT,
-    label: 'About',
-    icon: 'product',
-  },
-  {
-    path: PATH.PROJECTS,
-    label: 'Projects',
-    icon: 'product',
-  },
-  {
-    path: PATH.CERTIFICATES,
-    label: 'Certificate',
-    icon: 'certificate',
-  }
 ]

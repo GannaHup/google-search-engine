@@ -1,0 +1,36 @@
+.goose-logo {
+  @apply flex flex-row;
+  @apply gap-5;
+
+  .font-goose-blue {
+    @apply text-blue-1;
+    @apply font-semibold;
+    @apply text-7xl;
+
+    font-family: GoogleEyes, sans-serif;
+  }
+
+  .font-goose-red {
+    @apply text-red-1;
+    @apply font-semibold;
+    @apply text-7xl;
+
+    font-family: GoogleEyes, sans-serif;
+  }
+
+  .font-goose-yellow {
+    @apply text-yellow-1;
+    @apply font-semibold;
+    @apply text-7xl;
+
+    font-family: GoogleEyes, sans-serif;
+  }
+
+  .font-goose-green {
+    @apply text-green-1;
+    @apply font-semibold;
+    @apply text-7xl;
+
+    font-family: GoogleEyes, sans-serif;
+  }
+}
