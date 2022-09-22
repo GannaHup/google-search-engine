@@ -1,0 +1,1 @@
+export const SET_LOADING_SEARCH = "SET_LOADING_SEARCH"

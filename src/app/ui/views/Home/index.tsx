@@ -1,16 +1,23 @@
 import React, { useState } from 'react'
 import InputSearch from '@/app/ui/components/molecules/InputSearch'
+import { useAppDispatch } from "@/app/ui/stores"
+import { searchContent } from '@/app/ui/stores/actions/GoogleSearchAction'
 import './style.scss'
 
 const HomePage = () => {
   const [keyword, setKeyword] = useState('')
+  const dispatch = useAppDispatch()
 
   const onInputSearch = (val: string) => {
     setKeyword(val)
   }
 
   const onEnterInput = () => {
-    console.log(keyword)
+    dispatch(searchContent(keyword))
+  }
+
+  const onClickSearch = () => {
+    dispatch(searchContent(keyword))
   }
 
   return (
@@ -27,6 +34,7 @@ const HomePage = () => {
         canEnter
         onInput={onInputSearch}
         onKeyDown={onEnterInput}
+        onClickSearch={onClickSearch}
       />
     </div>
   )
