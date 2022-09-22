@@ -1,16 +1,21 @@
-import React, { ChangeEvent, useEffect, useState } from "react"
+import React, { ChangeEvent, KeyboardEvent, useEffect, useState } from "react"
 import { TextInputPropTypes } from "@/app/infrastructures/misc/types/components/TextInput.type"
 import './style.scss'
 
 const TextInput = (props: TextInputPropTypes) => {
-  const { customClass, onInput } = props
+  const { canEnter, customClass, onInput, onKeyDown } = props
   const [classWrapper, setClassWrapper] = useState('')
 
-  const onInputText = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
     const value = (event.target as HTMLInputElement).value
     if (onInput) onInput(value)
-  } 
+  }
 
+  const onKeyDownInput = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.code === 'Enter' && canEnter) {
+      if (onKeyDown) onKeyDown(event.code)
+    }
+  }
 
   useEffect(() => {
     let activeClass = 'wrapper-text-input'
@@ -22,9 +27,18 @@ const TextInput = (props: TextInputPropTypes) => {
 
   return (
     <div className={classWrapper}>
-      <input type='text' className="w-full" onChange={onInputText} />
+      <input
+        type='text'
+        className="w-full"
+        onChange={onChangeInput}
+        onKeyDown={onKeyDownInput}
+      />
     </div>
   )
+}
+
+TextInput.defaultProps = {
+  canEnter: false
 }
 
 export default TextInput

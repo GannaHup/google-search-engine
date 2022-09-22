@@ -4,12 +4,22 @@ import TextInput from '@/app/ui/components/atoms/TextInput'
 import Icons from '@/app/ui/assets/Icons/index'
 import './style.scss'
 
-const InputSearch: React.FC = (props: InputSearchPropTypes) => {
-  const { customClass, onInput } = props
+const InputSearch = (props: InputSearchPropTypes) => {
+  const { canEnter, customClass, onInput, onKeyDown, onClickSearch } = props
   const [classWrapper, setClassWrapper] = useState('')
 
   const onInputText = (val: string) => {
     if (onInput) onInput(val)
+  }
+
+  const onKeyDownInput = (val: string) => {
+    if (canEnter && onKeyDown) {
+      onKeyDown(val)
+    }
+  }
+
+  const onSearch = () => {
+    if (onClickSearch) onClickSearch()
   }
 
   useEffect(() => {
@@ -24,8 +34,13 @@ const InputSearch: React.FC = (props: InputSearchPropTypes) => {
 
   return (
     <div className={classWrapper}>
-      <TextInput customClass="pl-4 pr-11" onInput={onInputText} />
-      <div className="icon-search">
+      <TextInput
+        customClass="pl-4 pr-11"
+        canEnter={canEnter}
+        onInput={onInputText}
+        onKeyDown={onKeyDownInput}
+      />
+      <div className="icon-search" onClick={onSearch}>
         <Icons name="search" />
       </div>
     </div>
