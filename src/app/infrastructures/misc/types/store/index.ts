@@ -1,4 +1,5 @@
 import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
+import { EnumTabsResult } from "@/app/infrastructures/misc/constants/common"
 import { GoogleSearchDispatchTypes } from "./googleSearch.type"
 
 export type ActionDispatch = GoogleSearchDispatchTypes
@@ -8,6 +9,7 @@ export interface QueryParamsSearch {
   lr: string
   num: number
   start: number
+  type: EnumTabsResult
 }
 
 export interface TGoogleSearchtState {

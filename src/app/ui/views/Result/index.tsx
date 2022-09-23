@@ -2,15 +2,18 @@ import React, { useEffect, useState } from "react"
 import {
   isOnlyWhiteSpace,
   queryString,
+  serializeQuery,
 } from "@/app/infrastructures/misc/utils/useFormat"
 import { useHistory } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "@/app/ui/stores"
-import CardResult from '@/app/ui/components/molecules/CardResult'
 import InputSearch from "@/app/ui/components/molecules/InputSearch"
 import Tabs from "@/app/ui/components/atoms/Tabs"
 import Icons from "@/app/ui/assets/Icons/index"
-import { searchContent } from "@/app/ui/stores/actions/GoogleSearchAction"
-import { ITEM_TABS_RESULT } from "@/app/infrastructures/misc/constants/common"
+import { searchContent, setQueryParams } from "@/app/ui/stores/actions/GoogleSearchAction"
+import { EnumTabsResult, ITEM_TABS_RESULT } from "@/app/infrastructures/misc/constants/common"
+import SearchAll from "./Search"
+import ImagesResult from "./Images"
+import NewsResult from "./News"
 
 const ResultPage = () => {
   const params = queryString(window.location.search)
@@ -18,25 +21,22 @@ const ResultPage = () => {
   const dispatch = useAppDispatch()
   const { isLoading, queryParams, allResult } = useAppSelector((state) => state.google)
   const [keyword, setKeyword] = useState(params.q)
-  const [currentTab, setCurrentTab] = useState('all')
+  const [currentTab, setCurrentTab] = useState('search')
 
   const onInputSearch = (val: string) => {
     setKeyword(val)
   }
 
-  const onEnterInput = () => {
+  const onSearch = () => {
     if (!isOnlyWhiteSpace(keyword)) {
-      history.push(`/result?q=${keyword}&start=0&lr=lang_id&num=10`)
-    }
-  }
-
-  const onClickSearch = () => {
-    if (!isOnlyWhiteSpace(keyword)) {
-      history.push(`/result?q=${keyword}&start=0&lr=lang_id&num=10`)
+      const params = { ...queryParams, q: keyword }
+      history.push(`/result?${serializeQuery(params)}`)
     }
   }
 
   const onSelectTab = (id: string) => {
+    const params = { ...queryParams, type: id }
+    history.push(`/result?${serializeQuery(params)}`)
     setCurrentTab(id)
   }
 
@@ -44,11 +44,13 @@ const ResultPage = () => {
     if (params.q) {
       const newParams = {
         ...queryParams,
-        ...params
+        ...params,
+        type: EnumTabsResult.ALL
       }
-      dispatch(searchContent(newParams))
+      dispatch(setQueryParams(newParams))
+      // dispatch(searchContent(newParams))
     }
-  }, [params.keyword])
+  }, [params.q])
 
   return (
     <div className="max-w-4xl flex flex-col gap-5 pl-40 py-10">
@@ -57,8 +59,8 @@ const ResultPage = () => {
         canEnter
         customClass="max-w-4xl"
         onInput={(val) => onInputSearch(val)}
-        onKeyDown={() => onEnterInput()}
-        onClickSearch={() => onClickSearch()}
+        onKeyDown={onSearch}
+        onClickSearch={onSearch}
       />
       <Tabs
         currentTab={currentTab}
@@ -71,16 +73,20 @@ const ResultPage = () => {
             <Icons name="loading-bubble" />
           </div>
         ) : (
-          allResult.map((result, idx) => {
-            return (
-              <CardResult
-                title={result.title}
-                description={result.description}
-                link={result.link}
-                key={idx}
-              />
-            )
-          })
+          <>
+            {(() => {
+              switch (currentTab) {
+                case EnumTabsResult.ALL:
+                  return <SearchAll data={allResult} />
+                case EnumTabsResult.IMAGE:
+                  return <ImagesResult />
+                case EnumTabsResult.NEWS:
+                  return <NewsResult />
+                default:
+                  break;
+              }
+            })()}
+          </>
         )}
       </div>
     </div>

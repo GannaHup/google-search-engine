@@ -1,4 +1,5 @@
 import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
+import { QueryParamsSearch } from "."
 
 export interface GoogleSearchLoading {
   type: string
@@ -10,4 +11,9 @@ export interface GoogleSearchAllResult {
   data: GoogleResultSearch[]
 }
 
-export type GoogleSearchDispatchTypes = GoogleSearchLoading | GoogleSearchAllResult
+export interface GoogleQueryParams {
+  type: string
+  queryParams: QueryParamsSearch
+}
+
+export type GoogleSearchDispatchTypes = GoogleSearchLoading | GoogleSearchAllResult | GoogleQueryParams

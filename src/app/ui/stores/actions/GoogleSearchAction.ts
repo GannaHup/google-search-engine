@@ -2,8 +2,8 @@ import { Dispatch } from 'redux'
 import GoogleServiceApi from '@/app/infrastructures/services/GoogleService'
 import { AppDispatch } from '@/app/ui/stores'
 import { QueryParamsSearch } from '@/app/infrastructures/misc/types/store'
-import { SET_ALL_RESULT, SET_LOADING_SEARCH } from '@/app/infrastructures/misc/constants/actions'
-import { GoogleSearchLoading, GoogleSearchAllResult } from '@/app/infrastructures/misc/types/store/googleSearch.type'
+import { SET_ALL_RESULT, SET_LOADING_SEARCH, SET_QUERY_PARAMS } from '@/app/infrastructures/misc/constants/actions'
+import { GoogleSearchLoading, GoogleSearchAllResult, GoogleQueryParams } from '@/app/infrastructures/misc/types/store/googleSearch.type'
 import { GoogleResultSearch } from '@/data/responses/contracts/GoogleResponse'
 import { serializeQuery } from '@/app/infrastructures/misc/utils/useFormat'
 
@@ -38,6 +38,15 @@ function setAllResult(data: GoogleResultSearch[]) {
     dispatch({
       type: SET_ALL_RESULT,
       data: data
+    })
+  }
+}
+
+export function setQueryParams(data: any) {
+  return (dispatch: Dispatch<GoogleQueryParams>) => {
+    dispatch({
+      type: SET_QUERY_PARAMS,
+      queryParams: data
     })
   }
 }

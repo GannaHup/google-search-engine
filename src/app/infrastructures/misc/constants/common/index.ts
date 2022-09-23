@@ -1,14 +1,20 @@
+export enum EnumTabsResult {
+  ALL = 'search',
+  IMAGE = 'image',
+  NEWS = 'news',
+}
+
 export const ITEM_TABS_RESULT = [
   {
-    id: 'all',
+    id: EnumTabsResult.ALL,
     label: 'Semua'
   },
   {
-    id: 'image',
+    id: EnumTabsResult.IMAGE,
     label: 'Gambar'
   },
   {
-    id: 'news',
+    id: EnumTabsResult.NEWS,
     label: 'Berita'
   }
 ]
