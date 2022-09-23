@@ -14,7 +14,7 @@ const HomePage = () => {
 
   const onEnterInput = () => {
     if (!isOnlyWhiteSpace(keyword)) {
-      history.push(`/result?keyword=${keyword}&start=10`)
+      history.push(`/result?keyword=${keyword}&start=0`)
     }
   }
 

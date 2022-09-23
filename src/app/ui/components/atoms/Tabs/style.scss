@@ -1,0 +1,42 @@
+.wrapper-tabs {
+  @apply flex flex-row;
+  @apply border-b;
+
+  .tab {
+    @apply relative;
+    @apply flex flex-row;
+    @apply items-center;
+    @apply px-6;
+    @apply py-1.5;
+    @apply cursor-pointer;
+    @apply text-gray-700;
+  }
+
+  .tab-active {
+    @apply relative;
+    @apply flex flex-row;
+    @apply items-center;
+    @apply px-6;
+    @apply py-1.5;
+    @apply cursor-pointer;
+    @apply text-blue-1;
+    @apply font-medium;
+
+    &::before {
+      content: '';
+
+      @apply h-0.5;
+      @apply w-full;
+      @apply absolute;
+      @apply bottom-0;
+      @apply left-0;
+      @apply bg-blue-1;
+
+      -webkit-animation-name: extendsanimate; /* Fade in the background */
+      -webkit-animation-duration: 0.4s;
+      animation-name: extendsanimate;
+      animation-duration: 0.4s;
+      animation-fill-mode: forwards;
+    }
+  }
+}

@@ -13,3 +13,13 @@
   font-family: GoogleEyes;
   src: url('../fonts/google_eyes.ttf');
 }
+
+@keyframes extendsanimate {
+  from {
+    @apply w-0;
+  }
+
+  to {
+    @apply w-full;
+  }
+}

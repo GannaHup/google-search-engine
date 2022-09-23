@@ -1,3 +1,18 @@
+export const ITEM_TABS_RESULT = [
+  {
+    id: 'all',
+    label: 'Semua'
+  },
+  {
+    id: 'image',
+    label: 'Gambar'
+  },
+  {
+    id: 'news',
+    label: 'Berita'
+  }
+]
+
 export const ALL_RESULT_GOOGLE = [
   {
     title: "Merinding! Konser Dewa 19 di Malaysia, Semua Baladewa ...",
@@ -195,4 +210,4 @@ export const ALL_RESULT_GOOGLE = [
       span: " › read › 30-...",
     },
   },
-];
+]
