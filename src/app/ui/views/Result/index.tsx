@@ -16,8 +16,8 @@ const ResultPage = () => {
   const params = queryString(window.location.search)
   const history = useHistory()
   const dispatch = useAppDispatch()
-  const { isLoading, allResult } = useAppSelector((state) => state.google)
-  const [keyword, setKeyword] = useState(params.keyword)
+  const { isLoading, queryParams, allResult } = useAppSelector((state) => state.google)
+  const [keyword, setKeyword] = useState(params.q)
   const [currentTab, setCurrentTab] = useState('all')
 
   const onInputSearch = (val: string) => {
@@ -26,13 +26,13 @@ const ResultPage = () => {
 
   const onEnterInput = () => {
     if (!isOnlyWhiteSpace(keyword)) {
-      history.push(`/result?keyword=${keyword}&start=10`)
+      history.push(`/result?q=${keyword}&start=0&lr=lang_id&num=10`)
     }
   }
 
   const onClickSearch = () => {
     if (!isOnlyWhiteSpace(keyword)) {
-      history.push(`/result?keyword=${keyword}`)
+      history.push(`/result?q=${keyword}&start=0&lr=lang_id&num=10`)
     }
   }
 
@@ -41,8 +41,12 @@ const ResultPage = () => {
   }
 
   useEffect(() => {
-    if (params.keyword) {
-      dispatch(searchContent(params.keyword))
+    if (params.q) {
+      const newParams = {
+        ...queryParams,
+        ...params
+      }
+      dispatch(searchContent(newParams))
     }
   }, [params.keyword])
 

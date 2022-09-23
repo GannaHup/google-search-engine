@@ -14,13 +14,13 @@ const HomePage = () => {
 
   const onEnterInput = () => {
     if (!isOnlyWhiteSpace(keyword)) {
-      history.push(`/result?keyword=${keyword}&start=0`)
+      history.push(`/result?q=${keyword}&start=0&lr=lang_id&num=10`)
     }
   }
 
   const onClickSearch = () => {
     if (!isOnlyWhiteSpace(keyword)) {
-      history.push(`/result?keyword=${keyword}`)
+      history.push(`/result?q=${keyword}&start=0&lr=lang_id&num=10`)
     }
   }
 

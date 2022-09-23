@@ -6,7 +6,13 @@ import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
 const initialState: TGoogleSearchtState = {
   isLoading: false,
   // allResult: []
-  allResult: ALL_RESULT_GOOGLE
+  allResult: ALL_RESULT_GOOGLE,
+  queryParams: {
+    q: '',
+    lr: 'lang_id',
+    num: 10,
+    start: 0
+  }
 }
 
 export default function FormContactMeReducers (

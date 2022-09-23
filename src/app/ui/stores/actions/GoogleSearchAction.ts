@@ -1,15 +1,17 @@
 import { Dispatch } from 'redux'
 import GoogleServiceApi from '@/app/infrastructures/services/GoogleService'
 import { AppDispatch } from '@/app/ui/stores'
+import { QueryParamsSearch } from '@/app/infrastructures/misc/types/store'
 import { SET_ALL_RESULT, SET_LOADING_SEARCH } from '@/app/infrastructures/misc/constants/actions'
 import { GoogleSearchLoading, GoogleSearchAllResult } from '@/app/infrastructures/misc/types/store/googleSearch.type'
 import { GoogleResultSearch } from '@/data/responses/contracts/GoogleResponse'
+import { serializeQuery } from '@/app/infrastructures/misc/utils/useFormat'
 
-export const searchContent = (keyword: string) => {
+export const searchContent = (queryParams: QueryParamsSearch) => {
   return (dispatch: AppDispatch) => {
     dispatch(setLoading(true))
     GoogleServiceApi
-      .get(`api/v1/search/q=${keyword}&lr=lang_id&num=10&start=40`)
+      .get(`api/v1/search/${serializeQuery(queryParams)}`)
       .then((res) => {
         const { results } = res.data
         dispatch(setAllResult(results))
