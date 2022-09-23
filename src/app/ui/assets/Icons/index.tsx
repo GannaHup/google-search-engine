@@ -1,10 +1,12 @@
 import React from 'react'
 
 // Common
+import LoadingBubbleIcon from './common/icon_loading_bubble'
 import SearchIcon from './common/icon_search'
 
 const iconTypes: any = {
-  search: SearchIcon
+  search: SearchIcon,
+  'loading-bubble': LoadingBubbleIcon
 }
 
 interface Props {

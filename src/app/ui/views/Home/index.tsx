@@ -1,23 +1,27 @@
 import React, { useState } from 'react'
+import { isOnlyWhiteSpace } from '@/app/infrastructures/misc/utils/useFormat'
 import InputSearch from '@/app/ui/components/molecules/InputSearch'
-import { useAppDispatch } from "@/app/ui/stores"
-import { searchContent } from '@/app/ui/stores/actions/GoogleSearchAction'
+import { useHistory } from 'react-router-dom'
 import './style.scss'
 
 const HomePage = () => {
   const [keyword, setKeyword] = useState('')
-  const dispatch = useAppDispatch()
+  const history = useHistory()
 
   const onInputSearch = (val: string) => {
     setKeyword(val)
   }
 
   const onEnterInput = () => {
-    dispatch(searchContent(keyword))
+    if (!isOnlyWhiteSpace(keyword)) {
+      history.push(`/result?keyword=${keyword}&start=10`)
+    }
   }
 
   const onClickSearch = () => {
-    dispatch(searchContent(keyword))
+    if (!isOnlyWhiteSpace(keyword)) {
+      history.push(`/result?keyword=${keyword}`)
+    }
   }
 
   return (

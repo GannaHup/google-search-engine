@@ -5,7 +5,7 @@ import Icons from '@/app/ui/assets/Icons/index'
 import './style.scss'
 
 const InputSearch = (props: InputSearchPropTypes) => {
-  const { canEnter, customClass, onInput, onKeyDown, onClickSearch } = props
+  const { canEnter, value, customClass, onInput, onKeyDown, onClickSearch } = props
   const [classWrapper, setClassWrapper] = useState('')
 
   const onInputText = (val: string) => {
@@ -35,6 +35,7 @@ const InputSearch = (props: InputSearchPropTypes) => {
   return (
     <div className={classWrapper}>
       <TextInput
+        value={value}
         customClass="pl-4 pr-11"
         canEnter={canEnter}
         onInput={onInputText}

@@ -3,7 +3,7 @@ import { TextInputPropTypes } from "@/app/infrastructures/misc/types/components/
 import './style.scss'
 
 const TextInput = (props: TextInputPropTypes) => {
-  const { canEnter, customClass, onInput, onKeyDown } = props
+  const { canEnter, value, customClass, onInput, onKeyDown } = props
   const [classWrapper, setClassWrapper] = useState('')
 
   const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
@@ -28,6 +28,7 @@ const TextInput = (props: TextInputPropTypes) => {
   return (
     <div className={classWrapper}>
       <input
+        value={value}
         type='text'
         className="w-full"
         onChange={onChangeInput}

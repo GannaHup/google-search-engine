@@ -1,6 +1,13 @@
+import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
+
 export interface GoogleSearchLoading {
   type: string
-  payload: boolean
+  loading: boolean
 }
 
-export type GoogleSearchDispatchTypes = GoogleSearchLoading
+export interface GoogleSearchAllResult {
+  type: string
+  data: GoogleResultSearch[]
+}
+
+export type GoogleSearchDispatchTypes = GoogleSearchLoading | GoogleSearchAllResult

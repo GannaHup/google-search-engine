@@ -1,0 +1,17 @@
+.wrapper-card-result {
+  @apply max-w-3xl;
+  @apply flex flex-col;
+  @apply gap-2;
+  @apply py-2;
+  @apply px-3;
+  @apply pl-0;
+
+  .title-result-article {
+    @apply w-max;
+    @apply text-blue-700;
+    @apply font-medium;
+    @apply text-xl;
+    @apply hover:underline;
+    @apply visited:text-blue-400;
+  }
+}
