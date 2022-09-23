@@ -1,5 +1,5 @@
 export const isOnlyWhiteSpace = (str: string) => {
-  return /^\s*$/.test(str);
+  return /^\s*$/.test(str)
 }
 
 export const queryString = (query: string) => {

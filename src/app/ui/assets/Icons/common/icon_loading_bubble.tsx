@@ -125,7 +125,7 @@ const LoadingBubbleIcon = () => {
         ></animate>
       </circle>
     </svg>
-  );
-};
+  )
+}
 
-export default LoadingBubbleIcon;
+export default LoadingBubbleIcon

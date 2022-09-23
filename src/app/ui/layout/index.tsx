@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 import './style.scss'
-import { IMainLayout } from "./type";
+import { IMainLayout } from "./type"
 
 const MainLayout = (props: IMainLayout) => {
   const { children, name } = props
