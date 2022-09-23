@@ -1,4 +1,4 @@
-import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
+import { GoogleResultImage, GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
 import { QueryParamsSearch } from "."
 
 export interface GoogleSearchLoading {
@@ -9,6 +9,11 @@ export interface GoogleSearchLoading {
 export interface GoogleSearchAllResult {
   type: string
   data: GoogleResultSearch[]
+}
+
+export interface GoogleSearchImageResult {
+  type: string
+  imageResult: GoogleResultImage[]
 }
 
 export interface GoogleQueryParams {

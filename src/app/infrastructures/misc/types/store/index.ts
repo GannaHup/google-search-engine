@@ -1,4 +1,4 @@
-import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
+import { GoogleResultImage, GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
 import { EnumTabsResult } from "@/app/infrastructures/misc/constants/common"
 import { GoogleSearchDispatchTypes } from "./googleSearch.type"
 
@@ -15,6 +15,7 @@ export interface QueryParamsSearch {
 export interface TGoogleSearchtState {
   isLoading: boolean
   allResult: GoogleResultSearch[]
+  imageResult: GoogleResultImage[]
   queryParams: QueryParamsSearch
 }
 

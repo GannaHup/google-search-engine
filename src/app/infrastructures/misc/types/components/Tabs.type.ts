@@ -5,6 +5,7 @@ export interface ItemTabsTypes {
 
 export interface TabsTypes {
   currentTab: string
+  customClass?: string
   itemTabs: ItemTabsTypes[]
   onClick: (id: string) => void
 }

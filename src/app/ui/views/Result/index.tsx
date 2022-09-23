@@ -9,7 +9,7 @@ import { useAppDispatch, useAppSelector } from "@/app/ui/stores"
 import InputSearch from "@/app/ui/components/molecules/InputSearch"
 import Tabs from "@/app/ui/components/atoms/Tabs"
 import Icons from "@/app/ui/assets/Icons/index"
-import { searchContent, setQueryParams } from "@/app/ui/stores/actions/GoogleSearchAction"
+import { searchContent, searchImage, setQueryParams } from "@/app/ui/stores/actions/GoogleSearchAction"
 import { EnumTabsResult, ITEM_TABS_RESULT } from "@/app/infrastructures/misc/constants/common"
 import SearchAll from "./Search"
 import ImagesResult from "./Images"
@@ -19,9 +19,9 @@ const ResultPage = () => {
   const params = queryString(window.location.search)
   const history = useHistory()
   const dispatch = useAppDispatch()
-  const { isLoading, queryParams, allResult } = useAppSelector((state) => state.google)
+  const { isLoading, queryParams, allResult, imageResult } = useAppSelector((state) => state.google)
   const [keyword, setKeyword] = useState(params.q)
-  const [currentTab, setCurrentTab] = useState('search')
+  const [currentTab, setCurrentTab] = useState(params.type)
 
   const onInputSearch = (val: string) => {
     setKeyword(val)
@@ -42,28 +42,29 @@ const ResultPage = () => {
 
   useEffect(() => {
     if (params.q) {
-      const newParams = {
-        ...queryParams,
-        ...params,
-        type: EnumTabsResult.ALL
-      }
+      const newParams = { ...queryParams, ...params }
       dispatch(setQueryParams(newParams))
-      // dispatch(searchContent(newParams))
+      if (params.type === EnumTabsResult.ALL) {
+        // dispatch(searchContent(newParams))
+      } else if (params.type === EnumTabsResult.IMAGE) {
+        dispatch(searchImage(newParams))
+      }
     }
-  }, [params.q])
+  }, [params.q, params.type])
 
   return (
-    <div className="max-w-4xl flex flex-col gap-5 pl-40 py-10">
+    <div className="flex flex-col gap-5 py-10">
       <InputSearch
         value={keyword}
         canEnter
-        customClass="max-w-4xl"
+        customClass="max-w-4xl pl-40"
         onInput={(val) => onInputSearch(val)}
         onKeyDown={onSearch}
         onClickSearch={onSearch}
       />
       <Tabs
         currentTab={currentTab}
+        customClass="max-w-4xl ml-40"
         itemTabs={ITEM_TABS_RESULT}
         onClick={onSelectTab}
       />
@@ -79,7 +80,7 @@ const ResultPage = () => {
                 case EnumTabsResult.ALL:
                   return <SearchAll data={allResult} />
                 case EnumTabsResult.IMAGE:
-                  return <ImagesResult />
+                  return <ImagesResult data={imageResult} />
                 case EnumTabsResult.NEWS:
                   return <NewsResult />
                 default:
