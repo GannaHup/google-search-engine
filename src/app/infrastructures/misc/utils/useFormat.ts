@@ -25,3 +25,17 @@ export const serializeQuery = (query: any) => {
     })
     .join("&")
 }
+
+export const formatDate = (value: string) => {
+  const date = new Date(value)
+
+  const defaultValue = date.toLocaleDateString("id-ID",
+    {
+      weekday: 'long',
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    }
+  )
+  return defaultValue
+}

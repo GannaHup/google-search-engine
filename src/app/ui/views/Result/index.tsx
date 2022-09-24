@@ -70,7 +70,7 @@ const ResultPage = () => {
       <InputSearch
         value={keyword}
         canEnter
-        customClass="max-w-4xl pl-40"
+        customClass="max-w-4xl ml-40"
         onInput={(val) => onInputSearch(val)}
         onKeyDown={onSearch}
         onClickSearch={onSearch}
