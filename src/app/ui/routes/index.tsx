@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch } from 'react-router-dom'
+import { Redirect, Switch } from 'react-router-dom'
 import { MenuRoutes } from './menus'
 import Route from './Route'
 
@@ -17,6 +17,7 @@ const Routes = () => {
           />
         )
       })}
+      <Redirect to="/" />
     </Switch>
   )
 }
