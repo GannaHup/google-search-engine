@@ -1,4 +1,21 @@
 .wrapper-search-all {
   @apply md:pl-40 sm:pl-20 xs:pl-10 pl-4;
   @apply pr-2;
+
+  .empty-state {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply gap-6;
+    @apply mt-10;
+    @apply object-cover;
+    @apply mx-auto phone:mx-0;
+
+    .text-empty-state {
+      @apply font-semibold;
+      @apply text-gray-500;
+      @apply break-words;
+      @apply text-center;
+    }
+  }
 }

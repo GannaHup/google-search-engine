@@ -34,4 +34,21 @@
       @apply truncate;
     }
   }
+
+  .empty-state {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply gap-6;
+    @apply mt-10;
+    @apply object-cover;
+    @apply mx-auto phone:mx-0;
+
+    .text-empty-state {
+      @apply font-semibold;
+      @apply text-gray-500;
+      @apply break-words;
+      @apply text-center;
+    }
+  }
 }

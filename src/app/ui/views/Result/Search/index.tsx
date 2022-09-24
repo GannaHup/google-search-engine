@@ -24,8 +24,9 @@ const SearchAll = (props: SearchAllTypes) => {
           )
         })
       ) : (
-        <div className="mt-10">
+        <div className="empty-state">
           <Icons name="empty-state" />
+          <div className="text-empty-state">Oopss, Kami tidak dapat menemukan yang anda cari</div>
         </div>
     )}
     </div>
