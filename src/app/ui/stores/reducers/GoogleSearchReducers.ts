@@ -17,7 +17,7 @@ const initialState: TGoogleSearchtState = {
   queryParams: {
     q: '',
     lr: 'lang_id',
-    num: 10,
+    num: 100,
     start: 0,
     type: EnumTabsResult.ALL
   }

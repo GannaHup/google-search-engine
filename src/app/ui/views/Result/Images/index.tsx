@@ -20,7 +20,7 @@ const ImagesResult = (props: ImageResultTypes) => {
                 alt={item.image.alt}
                 className="object-cover h-36"
               />
-              <span className="hover:underline">{item.link.title}</span>
+              <span className="hover:underline truncate">{item.link.title}</span>
             </a>
           )
         })

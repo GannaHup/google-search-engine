@@ -1,12 +1,14 @@
 .wrapper-images-result {
-  @apply flex flex-row;
+  @apply grid;
+  @apply grid-cols-2 phone:grid-cols-3;
+  @apply xs:flex xs:flex-row;
   @apply flex-wrap;
-  @apply gap-6;
+  @apply gap-4 xs:gap-6;
   @apply mt-4;
-  @apply px-10;
+  @apply px-5 xs:px-0;
 
   .images-result {
-    @apply w-56;
+    @apply xs:w-28 sm:w-32 md:w-44;
     @apply flex flex-col;
     @apply gap-2;
     @apply cursor-pointer;
