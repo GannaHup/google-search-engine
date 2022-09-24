@@ -10,7 +10,7 @@ export interface AdditionalLinks {
 }
 
 export interface GoogleResultSearch {
-  additionalLinks?: AdditionalLinks[]
+  additional_links?: AdditionalLinks[]
   cite?: Cite
   description?: string
   link?: string

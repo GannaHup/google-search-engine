@@ -25,5 +25,5 @@ export interface TGoogleSearchtState {
 }
 
 export interface ReducersAllTypes  {
-  google: TGoogleSearchtState
+  google: TGoogleSearchtState | any
 }

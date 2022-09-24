@@ -7,12 +7,7 @@ import {
 } from "@/app/infrastructures/misc/constants/actions"
 import { EnumTabsResult } from "@/app/infrastructures/misc/constants/common"
 import { TGoogleSearchtState } from "@/app/infrastructures/misc/types/store"
-import { GoogleQueryParams } from "@/app/infrastructures/misc/types/store/googleSearch.type"
-import {
-  GoogleResultImage,
-  GoogleResultNews,
-  GoogleResultSearch
-} from "@/data/responses/contracts/GoogleResponse"
+import { GoogleSearchDispatchTypes } from "@/app/infrastructures/misc/types/store/googleSearch.type"
 
 const initialState: TGoogleSearchtState = {
   isLoading: false,
@@ -28,16 +23,9 @@ const initialState: TGoogleSearchtState = {
   }
 }
 
-export default function FormContactMeReducers (
+export default function GoogleSearchReducers (
   state: TGoogleSearchtState = initialState,
-  action: {
-    type: string,
-    loading: boolean,
-    data: GoogleResultSearch[],
-    queryParams: GoogleQueryParams,
-    imageResult: GoogleResultImage[]
-    newsResult: GoogleResultNews[]
-  }
+  action: GoogleSearchDispatchTypes
 ) {
   const {
     type,

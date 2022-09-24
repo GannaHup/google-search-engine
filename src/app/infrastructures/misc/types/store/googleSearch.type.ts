@@ -30,4 +30,11 @@ export interface GoogleQueryParams {
   queryParams: QueryParamsSearch
 }
 
-export type GoogleSearchDispatchTypes = GoogleSearchLoading | GoogleSearchAllResult | GoogleQueryParams
+export type GoogleSearchDispatchTypes = {
+  type: string
+  loading?: boolean
+  data?: GoogleResultSearch[]
+  imageResult?: GoogleResultImage[]
+  newsResult?: GoogleResultNews[]
+  queryParams?: QueryParamsSearch
+}
