@@ -17,4 +17,4 @@ export const ITEM_TABS_RESULT = [
     id: EnumTabsResult.NEWS,
     label: "Berita",
   },
-];
+]

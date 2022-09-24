@@ -1,14 +1,14 @@
-import React from "react";
-import CardResult from "@/app/ui/components/molecules/CardResult";
-import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse";
+import React from "react"
+import CardResult from "@/app/ui/components/molecules/CardResult"
+import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
 import Icons from "@/app/ui/assets/Icons/index"
 
 interface SearchAllTypes {
-  data: GoogleResultSearch[];
+  data: GoogleResultSearch[]
 }
 
 const SearchAll = (props: SearchAllTypes) => {
-  const { data } = props;
+  const { data } = props
   return (
     <div className="pl-40">
       {data && data.length > 0 ? (
@@ -20,7 +20,7 @@ const SearchAll = (props: SearchAllTypes) => {
               link={result.link}
               key={idx}
             />
-          );
+          )
         })
       ) : (
         <div className="mt-10">
@@ -28,7 +28,7 @@ const SearchAll = (props: SearchAllTypes) => {
         </div>
     )}
     </div>
-  );
-};
+  )
+}
 
-export default SearchAll;
+export default SearchAll

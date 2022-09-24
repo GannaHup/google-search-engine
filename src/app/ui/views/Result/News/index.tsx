@@ -1,15 +1,15 @@
-import React from "react";
-import { GoogleResultNews } from "@/data/responses/contracts/GoogleResponse";
-import { formatDate } from "@/app/infrastructures/misc/utils/useFormat";
-import Icons from "@/app/ui/assets/Icons/index";
-import "./style.scss";
+import React from "react"
+import { GoogleResultNews } from "@/data/responses/contracts/GoogleResponse"
+import { formatDate } from "@/app/infrastructures/misc/utils/useFormat"
+import Icons from "@/app/ui/assets/Icons/index"
+import "./style.scss"
 
 interface NewsResultTypes {
-  data: GoogleResultNews[];
+  data: GoogleResultNews[]
 }
 
 const NewsResult = (props: NewsResultTypes) => {
-  const { data } = props;
+  const { data } = props
   return (
     <div className="wrapper-news-result">
       {data && data.length > 0 ? (
@@ -29,7 +29,7 @@ const NewsResult = (props: NewsResultTypes) => {
                 {item.title}
               </a>
             </div>
-          );
+          )
         })
       ) : (
         <div className="mt-10">
@@ -37,7 +37,7 @@ const NewsResult = (props: NewsResultTypes) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default NewsResult;
+export default NewsResult

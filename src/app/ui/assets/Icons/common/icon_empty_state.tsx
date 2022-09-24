@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const EmptyStateIcon = () => {
   return (
@@ -462,7 +462,7 @@ const EmptyStateIcon = () => {
         fill="#AEAEAE"
       />
     </svg>
-  );
-};
+  )
+}
 
-export default EmptyStateIcon;
+export default EmptyStateIcon
