@@ -1,4 +1,5 @@
 import React from 'react'
+import EmptyStateIcon from './common/icon_empty_state'
 
 // Common
 import LoadingBubbleIcon from './common/icon_loading_bubble'
@@ -6,7 +7,8 @@ import SearchIcon from './common/icon_search'
 
 const iconTypes: any = {
   search: SearchIcon,
-  'loading-bubble': LoadingBubbleIcon
+  'loading-bubble': LoadingBubbleIcon,
+  'empty-state': EmptyStateIcon
 }
 
 interface Props {

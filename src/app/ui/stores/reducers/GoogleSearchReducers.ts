@@ -5,12 +5,7 @@ import {
   SET_NEWS_GOOGLE,
   SET_QUERY_PARAMS
 } from "@/app/infrastructures/misc/constants/actions"
-import {
-  ALL_RESULT_GOOGLE,
-  EnumTabsResult,
-  IMAGE_RESULT_GOOGLE,
-  NEWS_RESULT_GOOGLE
-} from "@/app/infrastructures/misc/constants/common"
+import { EnumTabsResult } from "@/app/infrastructures/misc/constants/common"
 import { TGoogleSearchtState } from "@/app/infrastructures/misc/types/store"
 import { GoogleQueryParams } from "@/app/infrastructures/misc/types/store/googleSearch.type"
 import {
@@ -21,10 +16,9 @@ import {
 
 const initialState: TGoogleSearchtState = {
   isLoading: false,
-  // allResult: []
-  allResult: ALL_RESULT_GOOGLE,
-  imageResult: IMAGE_RESULT_GOOGLE,
-  newsResult: NEWS_RESULT_GOOGLE,
+  allResult: [],
+  imageResult: [],
+  newsResult: [],
   queryParams: {
     q: '',
     lr: 'lang_id',
