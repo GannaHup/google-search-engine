@@ -1,0 +1,18 @@
+.wrapper-result {
+  @apply flex flex-col;
+  @apply gap-5;
+  @apply py-10;
+  @apply xs:px-10;
+
+  .wrapper-input-search {
+    @apply max-w-4xl;
+    @apply md:pl-40 sm:pl-20 xs:pl-10 pl-5;
+    @apply pr-5;
+  }
+
+  .content-result {
+    @apply flex flex-col;
+    @apply gap-5;
+    @apply mt-0;
+  }
+}

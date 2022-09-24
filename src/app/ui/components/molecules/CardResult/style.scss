@@ -7,11 +7,17 @@
   @apply pl-0;
 
   .title-result-article {
-    @apply w-max;
+    @apply max-w-lg;
     @apply text-blue-700;
     @apply font-medium;
-    @apply text-xl;
+    @apply text-xl xs:text-lg;
     @apply hover:underline;
     @apply visited:text-blue-400;
+    @apply truncate;
+  }
+
+  .description-result-article {
+    @apply text-gray-700;
+    @apply xs:text-sm;
   }
 }

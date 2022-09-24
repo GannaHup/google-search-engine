@@ -22,6 +22,7 @@ import {
 import SearchAll from "./Search"
 import ImagesResult from "./Images"
 import NewsResult from "./News"
+import './style.scss'
 
 const ResultPage = () => {
   const params = queryString(window.location.search)
@@ -72,22 +73,23 @@ const ResultPage = () => {
   }, [params.q, params.type])
 
   return (
-    <div className="flex flex-col gap-5 py-10">
-      <InputSearch
-        value={keyword}
-        canEnter
-        customClass="max-w-4xl ml-40"
-        onInput={(val) => onInputSearch(val)}
-        onKeyDown={onSearch}
-        onClickSearch={onSearch}
-      />
+    <div className="wrapper-result">
+      <div className="wrapper-input-search">
+        <InputSearch
+          value={keyword}
+          canEnter
+          onInput={(val) => onInputSearch(val)}
+          onKeyDown={onSearch}
+          onClickSearch={onSearch}
+        />
+      </div>
       <Tabs
         currentTab={currentTab}
-        customClass="max-w-4xl ml-40"
+        customClass="pr-10 md:pl-40 sm:pl-20 xs:pl-10 pl-5"
         itemTabs={ITEM_TABS_RESULT}
         onClick={onSelectTab}
       />
-      <div className="mt-0 flex flex-col gap-5">
+      <div className="content-result">
         {isLoading ? (
           <div className="mt-14">
             <Icons name="loading-bubble" />

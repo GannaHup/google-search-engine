@@ -1,5 +1,6 @@
 .wrapper-tabs {
   @apply flex flex-row;
+  @apply overflow-x-auto;
   @apply border-b;
 
   .tab {
@@ -10,6 +11,7 @@
     @apply py-1.5;
     @apply cursor-pointer;
     @apply text-gray-700;
+    @apply text-base xs:text-sm;
   }
 
   .tab-active {
@@ -21,6 +23,7 @@
     @apply cursor-pointer;
     @apply text-blue-1;
     @apply font-medium;
+    @apply text-base xs:text-sm;
 
     &::before {
       content: '';
@@ -39,4 +42,15 @@
       animation-fill-mode: forwards;
     }
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.wrapper-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.wrapper-tabs {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

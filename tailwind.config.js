@@ -14,7 +14,10 @@ module.exports = {
       }
     },
     screens: {
-      'phone': { max: '380px' }
+      'phone': { min: '380px' },
+      'xs': { min: '480px' },
+      'sm': { min: '768px' },
+      'md': { min: '960px' }
     }
   },
   plugins: [],

@@ -2,6 +2,7 @@ import React from "react"
 import CardResult from "@/app/ui/components/molecules/CardResult"
 import { GoogleResultSearch } from "@/data/responses/contracts/GoogleResponse"
 import Icons from "@/app/ui/assets/Icons/index"
+import './style.scss'
 
 interface SearchAllTypes {
   data: GoogleResultSearch[]
@@ -10,7 +11,7 @@ interface SearchAllTypes {
 const SearchAll = (props: SearchAllTypes) => {
   const { data } = props
   return (
-    <div className="pl-40">
+    <div className="wrapper-search-all">
       {data && data.length > 0 ? (
         data.map((result: GoogleResultSearch, idx: number) => {
           return (
