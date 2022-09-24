@@ -1,7 +1,8 @@
 .wrapper-news-result {
   @apply flex flex-col;
   @apply gap-5;
-  @apply pl-40;
+  @apply md:pl-40 sm:pl-20 xs:pl-10 pl-4;
+  @apply pr-2;
 
   .card-news-result {
     @apply flex flex-col;
@@ -27,9 +28,10 @@
     }
 
     .news-title {
-      @apply w-max;
+      @apply max-w-2xl;
       @apply text-blue-1;
       @apply hover:underline;
+      @apply truncate;
     }
   }
 }
