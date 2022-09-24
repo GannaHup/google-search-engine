@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { isOnlyWhiteSpace } from '@/app/infrastructures/misc/utils/useFormat'
-import { serializeQuery } from '@/app/infrastructures/misc/utils/useFormat'
+import { EnumTabsResult } from '@/app/infrastructures/misc/constants/common'
+import {
+  isOnlyWhiteSpace,
+  serializeQuery
+} from '@/app/infrastructures/misc/utils/useFormat'
 import InputSearch from '@/app/ui/components/molecules/InputSearch'
 import { useHistory } from 'react-router-dom'
 import './style.scss'
-import { EnumTabsResult } from '@/app/infrastructures/misc/constants/common'
 
 const HomePage = () => {
   const [keyword, setKeyword] = useState('')
@@ -29,7 +31,7 @@ const HomePage = () => {
   }
 
   return (
-    <div className='min-h-screen flex flex-col justify-center items-center gap-5'>
+    <div className='wrapper-home-page'>
       <div className='goose-logo'>
         <span className='font-goose-blue'>G</span>
         <span className='font-goose-red'>O</span>

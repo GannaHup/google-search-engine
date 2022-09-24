@@ -22,6 +22,7 @@ const InputSearch = (props: InputSearchPropTypes) => {
     if (onClickSearch) onClickSearch()
   }
 
+  // Custom Class Wrapper
   useEffect(() => {
     let activeClass = 'w-full relative flex flex-row rounded-lg overflow-hidden'
     if (customClass) {

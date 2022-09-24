@@ -13,6 +13,9 @@ module.exports = {
         'green-1': '#4ea853'
       }
     },
+    screens: {
+      'phone': { max: '380px' }
+    }
   },
   plugins: [],
 }
