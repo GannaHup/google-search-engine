@@ -9,7 +9,12 @@ import { useAppDispatch, useAppSelector } from "@/app/ui/stores"
 import InputSearch from "@/app/ui/components/molecules/InputSearch"
 import Tabs from "@/app/ui/components/atoms/Tabs"
 import Icons from "@/app/ui/assets/Icons/index"
-import { searchContent, searchImage, setQueryParams } from "@/app/ui/stores/actions/GoogleSearchAction"
+import {
+  searchContent,
+  searchImage,
+  searchNews,
+  setQueryParams
+} from "@/app/ui/stores/actions/GoogleSearchAction"
 import { EnumTabsResult, ITEM_TABS_RESULT } from "@/app/infrastructures/misc/constants/common"
 import SearchAll from "./Search"
 import ImagesResult from "./Images"
@@ -19,7 +24,13 @@ const ResultPage = () => {
   const params = queryString(window.location.search)
   const history = useHistory()
   const dispatch = useAppDispatch()
-  const { isLoading, queryParams, allResult, imageResult } = useAppSelector((state) => state.google)
+  const {
+    isLoading,
+    queryParams,
+    allResult,
+    imageResult,
+    newsResult
+  } = useAppSelector((state) => state.google)
   const [keyword, setKeyword] = useState(params.q)
   const [currentTab, setCurrentTab] = useState(params.type)
 
@@ -45,9 +56,11 @@ const ResultPage = () => {
       const newParams = { ...queryParams, ...params }
       dispatch(setQueryParams(newParams))
       if (params.type === EnumTabsResult.ALL) {
-        // dispatch(searchContent(newParams))
+        dispatch(searchContent(newParams))
       } else if (params.type === EnumTabsResult.IMAGE) {
         dispatch(searchImage(newParams))
+      } else if (params.type === EnumTabsResult.NEWS) {
+        dispatch(searchNews(newParams))
       }
     }
   }, [params.q, params.type])
@@ -82,7 +95,7 @@ const ResultPage = () => {
                 case EnumTabsResult.IMAGE:
                   return <ImagesResult data={imageResult} />
                 case EnumTabsResult.NEWS:
-                  return <NewsResult />
+                  return <NewsResult data={newsResult} />
                 default:
                   break;
               }

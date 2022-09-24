@@ -6,16 +6,19 @@ import {
   SET_ALL_RESULT,
   SET_IMAGE_GOOGLE,
   SET_LOADING_SEARCH,
+  SET_NEWS_GOOGLE,
   SET_QUERY_PARAMS
 } from '@/app/infrastructures/misc/constants/actions'
 import {
   GoogleSearchLoading,
   GoogleSearchAllResult,
   GoogleQueryParams,
-  GoogleSearchImageResult
+  GoogleSearchImageResult,
+  GoogleSearchNewsResult
 } from '@/app/infrastructures/misc/types/store/googleSearch.type'
 import {
   GoogleResultImage,
+  GoogleResultNews,
   GoogleResultSearch
 } from '@/data/responses/contracts/GoogleResponse'
 import { serializeQuery } from '@/app/infrastructures/misc/utils/useFormat'
@@ -52,6 +55,22 @@ export const searchImage = (queryParams: QueryParamsSearch) => {
   }
 }
 
+export const searchNews = (queryParams: QueryParamsSearch) => {
+  return (dispatch: AppDispatch) => {
+    dispatch(setLoading(true))
+    GoogleServiceApi
+      .get(`api/v1/news/${serializeQuery(queryParams)}`)
+      .then((res) => {
+        const { entries } = res.data
+        dispatch(setNewsResult(entries))
+        dispatch(setLoading(false))
+      })
+      .catch(() => {
+        dispatch(setLoading(false))
+      })
+  }
+}
+
 // Mutation
 function setLoading(bool: boolean) {
   return (dispatch: Dispatch<GoogleSearchLoading>) => {
@@ -80,6 +99,14 @@ function setImageResult(data: GoogleResultImage[]) {
   }
 }
 
+function setNewsResult(data: GoogleResultNews[]) {
+  return (dispatch: Dispatch<GoogleSearchNewsResult>) => {
+    dispatch({
+      type: SET_NEWS_GOOGLE,
+      newsResult: data
+    })
+  }
+}
 
 export function setQueryParams(data: QueryParamsSearch) {
   return (dispatch: Dispatch<GoogleQueryParams>) => {

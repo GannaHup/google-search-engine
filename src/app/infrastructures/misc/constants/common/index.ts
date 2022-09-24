@@ -330,3 +330,368 @@ export const IMAGE_RESULT_GOOGLE = [
     },
   },
 ];
+
+export const NEWS_RESULT_GOOGLE = [
+  {
+    title: "Hey Pandas, Show Me Your Plant Babies! - Bored Panda",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value: "Hey Pandas, Show Me Your Plant Babies! - Bored Panda",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://www.boredpanda.com/hey-pandas-show-me-your-plant-babies/",
+      },
+    ],
+    link: "https://www.boredpanda.com/hey-pandas-show-me-your-plant-babies/",
+    id: "CAIiEOcDlEmMW_I1NCCm8pwBr1MqGQgEKhAIACoHCAowis-RCzCsw6YDMN2IuQY",
+    guidislink: false,
+    published: "Fri, 23 Sep 2022 02:46:40 GMT",
+    published_parsed: [2022, 9, 23, 2, 46, 40, 4, 266, 0],
+    summary:
+      '<a href="https://www.boredpanda.com/hey-pandas-show-me-your-plant-babies/" target="_blank">Hey Pandas, Show Me Your Plant Babies!</a>&nbsp;&nbsp;<font color="#6f6f6f">Bored Panda</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://www.boredpanda.com/hey-pandas-show-me-your-plant-babies/" target="_blank">Hey Pandas, Show Me Your Plant Babies!</a>&nbsp;&nbsp;<font color="#6f6f6f">Bored Panda</font>',
+    },
+    source: {
+      href: "https://www.boredpanda.com",
+      title: "Bored Panda",
+    },
+    sub_articles: [],
+  },
+  {
+    title: "Norfolk zoo 'overjoyed' at birth of endangered red panda - BBC",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value: "Norfolk zoo 'overjoyed' at birth of endangered red panda - BBC",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://www.bbc.com/news/uk-england-norfolk-62981400",
+      },
+    ],
+    link: "https://www.bbc.com/news/uk-england-norfolk-62981400",
+    id: "CBMiNGh0dHBzOi8vd3d3LmJiYy5jb20vbmV3cy91ay1lbmdsYW5kLW5vcmZvbGstNjI5ODE0MDDSAThodHRwczovL3d3dy5iYmMuY29tL25ld3MvdWstZW5nbGFuZC1ub3Jmb2xrLTYyOTgxNDAwLmFtcA",
+    guidislink: false,
+    published: "Thu, 22 Sep 2022 05:08:34 GMT",
+    published_parsed: [2022, 9, 22, 5, 8, 34, 3, 265, 0],
+    summary:
+      '<a href="https://www.bbc.com/news/uk-england-norfolk-62981400" target="_blank">Norfolk zoo \'overjoyed\' at birth of endangered red panda</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://www.bbc.com/news/uk-england-norfolk-62981400" target="_blank">Norfolk zoo \'overjoyed\' at birth of endangered red panda</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC</font>',
+    },
+    source: {
+      href: "https://www.bbc.com",
+      title: "BBC",
+    },
+    sub_articles: [],
+  },
+  {
+    title: "Panda has brain disease; Chinese experts mulled - 台北時報",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value: "Panda has brain disease; Chinese experts mulled - 台北時報",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://www.taipeitimes.com/News/taiwan/archives/2022/09/24/2003785852",
+      },
+    ],
+    link: "https://www.taipeitimes.com/News/taiwan/archives/2022/09/24/2003785852",
+    id: "CBMiRmh0dHBzOi8vd3d3LnRhaXBlaXRpbWVzLmNvbS9OZXdzL3RhaXdhbi9hcmNoaXZlcy8yMDIyLzA5LzI0LzIwMDM3ODU4NTLSAQA",
+    guidislink: false,
+    published: "Fri, 23 Sep 2022 16:00:00 GMT",
+    published_parsed: [2022, 9, 23, 16, 0, 0, 4, 266, 0],
+    summary:
+      '<a href="https://www.taipeitimes.com/News/taiwan/archives/2022/09/24/2003785852" target="_blank">Panda has brain disease; Chinese experts mulled</a>&nbsp;&nbsp;<font color="#6f6f6f">台北時報</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://www.taipeitimes.com/News/taiwan/archives/2022/09/24/2003785852" target="_blank">Panda has brain disease; Chinese experts mulled</a>&nbsp;&nbsp;<font color="#6f6f6f">台北時報</font>',
+    },
+    source: {
+      href: "https://www.taipeitimes.com",
+      title: "台北時報",
+    },
+    sub_articles: [],
+  },
+  {
+    title:
+      "Hey Pandas, What Are The Weirdest Things Your Pets Do? - Bored Panda",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value:
+        "Hey Pandas, What Are The Weirdest Things Your Pets Do? - Bored Panda",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://www.boredpanda.com/hey-pandas-what-are-the-weirdest-things-your-pets-do/",
+      },
+    ],
+    link: "https://www.boredpanda.com/hey-pandas-what-are-the-weirdest-things-your-pets-do/",
+    id: "CBMiUGh0dHBzOi8vd3d3LmJvcmVkcGFuZGEuY29tL2hleS1wYW5kYXMtd2hhdC1hcmUtdGhlLXdlaXJkZXN0LXRoaW5ncy15b3VyLXBldHMtZG8v0gEA",
+    guidislink: false,
+    published: "Fri, 23 Sep 2022 04:47:20 GMT",
+    published_parsed: [2022, 9, 23, 4, 47, 20, 4, 266, 0],
+    summary:
+      '<a href="https://www.boredpanda.com/hey-pandas-what-are-the-weirdest-things-your-pets-do/" target="_blank">Hey Pandas, What Are The Weirdest Things Your Pets Do?</a>&nbsp;&nbsp;<font color="#6f6f6f">Bored Panda</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://www.boredpanda.com/hey-pandas-what-are-the-weirdest-things-your-pets-do/" target="_blank">Hey Pandas, What Are The Weirdest Things Your Pets Do?</a>&nbsp;&nbsp;<font color="#6f6f6f">Bored Panda</font>',
+    },
+    source: {
+      href: "https://www.boredpanda.com",
+      title: "Bored Panda",
+    },
+    sub_articles: [],
+  },
+  {
+    title:
+      "Panda Bear and Sonic Boom take a psychedelic-pop plunge on their FREAKS ONLY guest mix - KCRW",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value:
+        "Panda Bear and Sonic Boom take a psychedelic-pop plunge on their FREAKS ONLY guest mix - KCRW",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://www.kcrw.com/music/shows/travis-holcombe/panda-bear-sonic-boom-reset-animal-collective-spacemen-3",
+      },
+    ],
+    link: "https://www.kcrw.com/music/shows/travis-holcombe/panda-bear-sonic-boom-reset-animal-collective-spacemen-3",
+    id: "CBMiaWh0dHBzOi8vd3d3LmtjcncuY29tL211c2ljL3Nob3dzL3RyYXZpcy1ob2xjb21iZS9wYW5kYS1iZWFyLXNvbmljLWJvb20tcmVzZXQtYW5pbWFsLWNvbGxlY3RpdmUtc3BhY2VtZW4tM9IBAA",
+    guidislink: false,
+    published: "Fri, 23 Sep 2022 03:00:00 GMT",
+    published_parsed: [2022, 9, 23, 3, 0, 0, 4, 266, 0],
+    summary:
+      '<a href="https://www.kcrw.com/music/shows/travis-holcombe/panda-bear-sonic-boom-reset-animal-collective-spacemen-3" target="_blank">Panda Bear and Sonic Boom take a psychedelic-pop plunge on their FREAKS ONLY guest mix</a>&nbsp;&nbsp;<font color="#6f6f6f">KCRW</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://www.kcrw.com/music/shows/travis-holcombe/panda-bear-sonic-boom-reset-animal-collective-spacemen-3" target="_blank">Panda Bear and Sonic Boom take a psychedelic-pop plunge on their FREAKS ONLY guest mix</a>&nbsp;&nbsp;<font color="#6f6f6f">KCRW</font>',
+    },
+    source: {
+      href: "https://www.kcrw.com",
+      title: "KCRW",
+    },
+    sub_articles: [],
+  },
+  {
+    title: "Panda Express’ White Whale - The Takeout",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value: "Panda Express’ White Whale - The Takeout",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://thetakeout.com/panda-express-orange-chicken-sandwich-test-where-to-buy-1849553591",
+      },
+    ],
+    link: "https://thetakeout.com/panda-express-orange-chicken-sandwich-test-where-to-buy-1849553591",
+    id: "CAIiEB8uaVtDjnKTwbj1R4yh14wqGQgEKhAIACoHCAow_q3_CjCZyvgCMKGt5gU",
+    guidislink: false,
+    published: "Mon, 19 Sep 2022 20:00:00 GMT",
+    published_parsed: [2022, 9, 19, 20, 0, 0, 0, 262, 0],
+    summary:
+      '<a href="https://thetakeout.com/panda-express-orange-chicken-sandwich-test-where-to-buy-1849553591" target="_blank">Panda Express’ White Whale</a>&nbsp;&nbsp;<font color="#6f6f6f">The Takeout</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://thetakeout.com/panda-express-orange-chicken-sandwich-test-where-to-buy-1849553591" target="_blank">Panda Express’ White Whale</a>&nbsp;&nbsp;<font color="#6f6f6f">The Takeout</font>',
+    },
+    source: {
+      href: "https://thetakeout.com",
+      title: "The Takeout",
+    },
+    sub_articles: [],
+  },
+  {
+    title:
+      "A calendar filled with pictures of furry panda butts is here to improve your gloomy Mondays - SoraNews24",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value:
+        "A calendar filled with pictures of furry panda butts is here to improve your gloomy Mondays - SoraNews24",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://soranews24.com/2022/09/23/a-calendar-filled-with-pictures-of-furry-panda-butts-is-here-to-improve-your-gloomy-mondays/",
+      },
+    ],
+    link: "https://soranews24.com/2022/09/23/a-calendar-filled-with-pictures-of-furry-panda-butts-is-here-to-improve-your-gloomy-mondays/",
+    id: "CAIiEEzrtFCxsr6Tn6QIOPWg9fgqGQgEKhAIACoHCAow4arvCjD3xrYCMJG4gQM",
+    guidislink: false,
+    published: "Fri, 23 Sep 2022 04:06:10 GMT",
+    published_parsed: [2022, 9, 23, 4, 6, 10, 4, 266, 0],
+    summary:
+      '<a href="https://soranews24.com/2022/09/23/a-calendar-filled-with-pictures-of-furry-panda-butts-is-here-to-improve-your-gloomy-mondays/" target="_blank">A calendar filled with pictures of furry panda butts is here to improve your gloomy Mondays</a>&nbsp;&nbsp;<font color="#6f6f6f">SoraNews24</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://soranews24.com/2022/09/23/a-calendar-filled-with-pictures-of-furry-panda-butts-is-here-to-improve-your-gloomy-mondays/" target="_blank">A calendar filled with pictures of furry panda butts is here to improve your gloomy Mondays</a>&nbsp;&nbsp;<font color="#6f6f6f">SoraNews24</font>',
+    },
+    source: {
+      href: "https://soranews24.com",
+      title: "SoraNews24",
+    },
+    sub_articles: [],
+  },
+  {
+    title:
+      "“Panda” Dunks Restock For The Family On October 14th - Sneaker News",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value:
+        "“Panda” Dunks Restock For The Family On October 14th - Sneaker News",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://sneakernews.com/2022/09/21/panda-dunk-restock-october-2022/",
+      },
+    ],
+    link: "https://sneakernews.com/2022/09/21/panda-dunk-restock-october-2022/",
+    id: "CBMiQ2h0dHBzOi8vc25lYWtlcm5ld3MuY29tLzIwMjIvMDkvMjEvcGFuZGEtZHVuay1yZXN0b2NrLW9jdG9iZXItMjAyMi_SAUdodHRwczovL3NuZWFrZXJuZXdzLmNvbS8yMDIyLzA5LzIxL3BhbmRhLWR1bmstcmVzdG9jay1vY3RvYmVyLTIwMjIvYW1wLw",
+    guidislink: false,
+    published: "Wed, 21 Sep 2022 15:02:51 GMT",
+    published_parsed: [2022, 9, 21, 15, 2, 51, 2, 264, 0],
+    summary:
+      '<a href="https://sneakernews.com/2022/09/21/panda-dunk-restock-october-2022/" target="_blank">“Panda” Dunks Restock For The Family On October 14th</a>&nbsp;&nbsp;<font color="#6f6f6f">Sneaker News</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://sneakernews.com/2022/09/21/panda-dunk-restock-october-2022/" target="_blank">“Panda” Dunks Restock For The Family On October 14th</a>&nbsp;&nbsp;<font color="#6f6f6f">Sneaker News</font>',
+    },
+    source: {
+      href: "https://sneakernews.com",
+      title: "Sneaker News",
+    },
+    sub_articles: [],
+  },
+  {
+    title:
+      "Panda Express Relaunches Plant-Based Orange Chicken Nationwide - NACS Online",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value:
+        "Panda Express Relaunches Plant-Based Orange Chicken Nationwide - NACS Online",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://www.convenience.org/Media/Daily/2022/Sep/12/6-Panda-Express-Relaunches-Plant-Based_Foodservice",
+      },
+    ],
+    link: "https://www.convenience.org/Media/Daily/2022/Sep/12/6-Panda-Express-Relaunches-Plant-Based_Foodservice",
+    id: "CBMiZmh0dHBzOi8vd3d3LmNvbnZlbmllbmNlLm9yZy9NZWRpYS9EYWlseS8yMDIyL1NlcC8xMi82LVBhbmRhLUV4cHJlc3MtUmVsYXVuY2hlcy1QbGFudC1CYXNlZF9Gb29kc2VydmljZdIBAA",
+    guidislink: false,
+    published: "Mon, 12 Sep 2022 07:00:00 GMT",
+    published_parsed: [2022, 9, 12, 7, 0, 0, 0, 255, 0],
+    summary:
+      '<a href="https://www.convenience.org/Media/Daily/2022/Sep/12/6-Panda-Express-Relaunches-Plant-Based_Foodservice" target="_blank">Panda Express Relaunches Plant-Based Orange Chicken Nationwide</a>&nbsp;&nbsp;<font color="#6f6f6f">NACS Online</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://www.convenience.org/Media/Daily/2022/Sep/12/6-Panda-Express-Relaunches-Plant-Based_Foodservice" target="_blank">Panda Express Relaunches Plant-Based Orange Chicken Nationwide</a>&nbsp;&nbsp;<font color="#6f6f6f">NACS Online</font>',
+    },
+    source: {
+      href: "https://www.convenience.org",
+      title: "NACS Online",
+    },
+    sub_articles: [],
+  },
+  {
+    title:
+      "“Accidental Comedy”: 40 Of The Best Unintentionally Funny Pics (New Pics) - Bored Panda",
+    title_detail: {
+      type: "text/plain",
+      language: null,
+      base: "",
+      value:
+        "“Accidental Comedy”: 40 Of The Best Unintentionally Funny Pics (New Pics) - Bored Panda",
+    },
+    links: [
+      {
+        rel: "alternate",
+        type: "text/html",
+        href: "https://www.boredpanda.com/funny-accidental-comedy-photos/",
+      },
+    ],
+    link: "https://www.boredpanda.com/funny-accidental-comedy-photos/",
+    id: "CAIiEOa50vZqzv0OQkG5LZMuBa8qGQgEKhAIACoHCAowis-RCzCsw6YDMPCSuQY",
+    guidislink: false,
+    published: "Fri, 23 Sep 2022 10:32:45 GMT",
+    published_parsed: [2022, 9, 23, 10, 32, 45, 4, 266, 0],
+    summary:
+      '<a href="https://www.boredpanda.com/funny-accidental-comedy-photos/" target="_blank">“Accidental Comedy”: 40 Of The Best Unintentionally Funny Pics (New Pics)</a>&nbsp;&nbsp;<font color="#6f6f6f">Bored Panda</font>',
+    summary_detail: {
+      type: "text/html",
+      language: null,
+      base: "",
+      value:
+        '<a href="https://www.boredpanda.com/funny-accidental-comedy-photos/" target="_blank">“Accidental Comedy”: 40 Of The Best Unintentionally Funny Pics (New Pics)</a>&nbsp;&nbsp;<font color="#6f6f6f">Bored Panda</font>',
+    },
+    source: {
+      href: "https://www.boredpanda.com",
+      title: "Bored Panda",
+    },
+    sub_articles: [],
+  }
+]

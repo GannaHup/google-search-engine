@@ -1,0 +1,35 @@
+.wrapper-news-result {
+  @apply flex flex-col;
+  @apply gap-5;
+  @apply pl-40;
+
+  .card-news-result {
+    @apply flex flex-col;
+    @apply gap-0.5;
+
+    .news-info {
+      @apply flex flex-row;
+      @apply items-center;
+      @apply gap-2;
+
+      .news-source {
+        @apply w-max;
+        @apply text-xs;
+        @apply text-gray-600;
+        @apply hover:underline;
+      }
+
+      .news-date-published {
+        @apply w-max;
+        @apply text-xs;
+        @apply text-gray-600;
+      }
+    }
+
+    .news-title {
+      @apply w-max;
+      @apply text-blue-1;
+      @apply hover:underline;
+    }
+  }
+}

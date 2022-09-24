@@ -2,17 +2,20 @@ import {
   SET_ALL_RESULT,
   SET_IMAGE_GOOGLE,
   SET_LOADING_SEARCH,
+  SET_NEWS_GOOGLE,
   SET_QUERY_PARAMS
 } from "@/app/infrastructures/misc/constants/actions"
 import {
   ALL_RESULT_GOOGLE,
   EnumTabsResult,
-  IMAGE_RESULT_GOOGLE
+  IMAGE_RESULT_GOOGLE,
+  NEWS_RESULT_GOOGLE
 } from "@/app/infrastructures/misc/constants/common"
 import { TGoogleSearchtState } from "@/app/infrastructures/misc/types/store"
 import { GoogleQueryParams } from "@/app/infrastructures/misc/types/store/googleSearch.type"
 import {
   GoogleResultImage,
+  GoogleResultNews,
   GoogleResultSearch
 } from "@/data/responses/contracts/GoogleResponse"
 
@@ -21,6 +24,7 @@ const initialState: TGoogleSearchtState = {
   // allResult: []
   allResult: ALL_RESULT_GOOGLE,
   imageResult: IMAGE_RESULT_GOOGLE,
+  newsResult: NEWS_RESULT_GOOGLE,
   queryParams: {
     q: '',
     lr: 'lang_id',
@@ -38,9 +42,17 @@ export default function FormContactMeReducers (
     data: GoogleResultSearch[],
     queryParams: GoogleQueryParams,
     imageResult: GoogleResultImage[]
+    newsResult: GoogleResultNews[]
   }
 ) {
-  const { type, loading, data, queryParams, imageResult } = action
+  const {
+    type,
+    loading,
+    data,
+    queryParams,
+    imageResult,
+    newsResult
+  } = action
 
   switch(type) {
     case SET_LOADING_SEARCH:
@@ -60,7 +72,13 @@ export default function FormContactMeReducers (
         ...state,
         imageResult: imageResult
       }
-      
+
+    case SET_NEWS_GOOGLE:
+      return {
+        ...state,
+        newsResult: newsResult
+      }
+
     case SET_QUERY_PARAMS:
       return {
         ...state,
