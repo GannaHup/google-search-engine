@@ -1,14 +1,16 @@
 import React from 'react'
-import EmptyStateIcon from './common/icon_empty_state'
 
 // Common
+import ChevronIcon from './common/icon_chevron'
+import EmptyStateIcon from './common/icon_empty_state'
 import LoadingBubbleIcon from './common/icon_loading_bubble'
 import SearchIcon from './common/icon_search'
 
 const iconTypes: any = {
-  search: SearchIcon,
+  'empty-state': EmptyStateIcon,
   'loading-bubble': LoadingBubbleIcon,
-  'empty-state': EmptyStateIcon
+  chevron: ChevronIcon,
+  search: SearchIcon
 }
 
 interface Props {

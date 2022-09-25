@@ -29,7 +29,8 @@
 
     .news-title {
       @apply max-w-2xl;
-      @apply text-blue-1;
+      @apply text-blue-700;
+      @apply visited:text-blue-400;
       @apply hover:underline;
       @apply truncate;
     }

@@ -9,10 +9,10 @@
   .title-result-article {
     @apply max-w-lg;
     @apply text-blue-700;
+    @apply visited:text-blue-400;
     @apply font-medium;
     @apply text-xl xs:text-lg;
     @apply hover:underline;
-    @apply visited:text-blue-400;
     @apply truncate;
   }
 

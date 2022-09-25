@@ -8,9 +8,10 @@ module.exports = {
     extend: {
       colors: {
         'blue-1': '#4185f4',
+        'gray-1': '#e0e0e0',
+        'green-1': '#4ea853',
         'red-1': '#ea4335',
         'yellow-1': '#fbbd33',
-        'green-1': '#4ea853'
       }
     },
     screens: {
