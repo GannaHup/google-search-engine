@@ -1,9 +1,12 @@
-# Goose
-
 <div align="center">
-  <a href>
+  <a href="https://g-goose.netlify.app/">
     <img src="https://user-images.githubusercontent.com/86098273/192129086-53f7017e-0161-48f8-a1e9-47a15aadb940.png" alt="Logo">
   </a>
+  <br />
+  <h4>Goose</h4>
+  <span>Google Search Engine</span>
+  <br />
+  [<a href="https://g-goose.netlify.app/">See Apps</a>]
 </div>
 
 #### FOLDER STRUCTURE IN THIS PROJECT
@@ -19,7 +22,7 @@ Generally this project is divided to 2 layers: `App`, `Data`
       + misc (Contains miscellanous function needed in the app layer)
         + constants (Defining data static)
           + actions (Data Static for actions store)
-          + commong (Data static for common apps)
+          + common (Data static for common apps)
         + types (Contains type or interface for ui requirement)
           + common (Type or interface for common)
           + components (Type or interface for components)
