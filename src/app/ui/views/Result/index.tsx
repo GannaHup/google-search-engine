@@ -22,6 +22,7 @@ import {
 import SearchAll from "./Search"
 import ImagesResult from "./Images"
 import NewsResult from "./News"
+import Bookmark from "./Bookmark"
 import './style.scss'
 
 const ResultPage = () => {
@@ -64,7 +65,12 @@ const ResultPage = () => {
     }
     if (
       !params.q ||
-      ![EnumTabsResult.ALL, EnumTabsResult.IMAGE, EnumTabsResult.NEWS].includes(
+      ![
+        EnumTabsResult.ALL,
+        EnumTabsResult.IMAGE,
+        EnumTabsResult.NEWS,
+        EnumTabsResult.BOOKMARK
+      ].includes(
         params.type as EnumTabsResult
       )
     ) {
@@ -104,6 +110,8 @@ const ResultPage = () => {
                   return <ImagesResult data={imageResult} />
                 case EnumTabsResult.NEWS:
                   return <NewsResult data={newsResult} />
+                case EnumTabsResult.BOOKMARK:
+                  return <Bookmark />
                 default:
                   break
               }

@@ -1,7 +1,7 @@
 import React from "react"
-import { GoogleResultNews } from "@/data/responses/contracts/GoogleResponse"
-import { formatDate } from "@/app/infrastructures/misc/utils/useFormat"
 import Icons from "@/app/ui/assets/Icons/index"
+import CardNews from "@/app/ui/components/molecules/CardNews"
+import { GoogleResultNews } from "@/data/responses/contracts/GoogleResponse"
 import "./style.scss"
 
 interface NewsResultTypes {
@@ -15,20 +15,7 @@ const NewsResult = (props: NewsResultTypes) => {
       {data && data.length > 0 ? (
         data.map((item: GoogleResultNews, idx: number) => {
           return (
-            <div key={idx} className="card-news-result">
-              <div className="news-info">
-                <a href={item.source.href} className="news-source">
-                  {item.source.title}
-                </a>
-                <span>•</span>
-                <span className="news-date-published">
-                  {formatDate(item.published)}
-                </span>
-              </div>
-              <a href={item.link} className="news-title">
-                {item.title}
-              </a>
-            </div>
+            <CardNews item={item} key={idx} />
           )
         })
       ) : (

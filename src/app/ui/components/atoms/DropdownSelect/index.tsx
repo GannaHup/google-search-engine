@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { DropdownSelectProps, Options } from "@/app/infrastructures/misc/types/components/DropdownSelect"
+import { DropdownSelectProps, Options } from "@/app/infrastructures/misc/types/components/DropdownSelect.type"
 import Icons from "@/app/ui/assets/Icons/index"
 import './style.scss'
 

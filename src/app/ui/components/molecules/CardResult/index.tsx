@@ -1,11 +1,6 @@
 import React from "react"
+import { CardResultProps } from "@/app/infrastructures/misc/types/components/CardResult.type"
 import './style.scss'
-
-interface CardResultProps {
-  title?: string
-  link?: string
-  description?: string
-}
 
 const CardResult = (props: CardResultProps) => {
   const { title, link, description } = props
