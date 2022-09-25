@@ -3,7 +3,7 @@
     <img src="https://user-images.githubusercontent.com/86098273/192129086-53f7017e-0161-48f8-a1e9-47a15aadb940.png" alt="Logo">
   </a>
   <br />
-  <h4>Goose</h4>
+  <h3>Goose</h3>
   <span>Google Search Engine</span>
   <br />
   [<a href="https://g-goose.netlify.app/">See Apps</a>]
