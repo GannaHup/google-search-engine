@@ -1,14 +1,8 @@
 import React from "react"
+import { CardNewsProps } from "@/app/infrastructures/misc/types/components/CardNews.type"
 import { formatDate } from "@/app/infrastructures/misc/utils/useFormat"
 import Icons from "@/app/ui/assets/Icons/index"
-import { GoogleResultNews } from "@/data/responses/contracts/GoogleResponse"
 import './style.scss'
-
-interface CardNewsProps {
-  item: GoogleResultNews
-  marked: boolean
-  onBookmark: (item: GoogleResultNews) => void
-}
 
 const CardNews = (props: CardNewsProps) => {
   const { item, marked, onBookmark } = props
