@@ -1,12 +1,12 @@
 <div align="center">
-  <a href="https://g-goose.netlify.app/">
+  <a href="https://g-goose.netlify.app/" target="_blank">
     <img src="https://user-images.githubusercontent.com/86098273/192129086-53f7017e-0161-48f8-a1e9-47a15aadb940.png" alt="Logo">
   </a>
   <br />
   <h3>Goose</h3>
   <span>Google Search Engine</span>
   <br />
-  [<a href="https://g-goose.netlify.app/">See Apps</a>]
+  [<a href="https://g-goose.netlify.app/" target="_blank">See Apps</a>]
 </div>
 
 #### FOLDER STRUCTURE IN THIS PROJECT
