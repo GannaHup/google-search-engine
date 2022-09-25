@@ -11,7 +11,7 @@
     @apply py-1.5;
     @apply cursor-pointer;
     @apply text-gray-700;
-    @apply text-base xs:text-sm;
+    @apply text-sm xs:text-base;
   }
 
   .tab-active {
@@ -23,7 +23,7 @@
     @apply cursor-pointer;
     @apply text-blue-1;
     @apply font-medium;
-    @apply text-base xs:text-sm;
+    @apply text-sm xs:text-base;
 
     &::before {
       content: '';

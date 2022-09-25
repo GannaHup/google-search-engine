@@ -91,7 +91,7 @@ const ResultPage = () => {
       </div>
       <Tabs
         currentTab={currentTab}
-        customClass="pr-10 md:pl-40 sm:pl-20 xs:pl-10 pl-5"
+        customClass="pr-10 md:pl-36 sm:pl-16 xs:pl-5 pl-0"
         itemTabs={ITEM_TABS_RESULT}
         onClick={onSelectTab}
       />
