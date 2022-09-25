@@ -18,7 +18,8 @@ module.exports = {
       'phone': { min: '380px' },
       'xs': { min: '480px' },
       'sm': { min: '768px' },
-      'md': { min: '960px' }
+      'md': { min: '960px' },
+      'lg': { min: '1024px' }
     }
   },
   plugins: [],
