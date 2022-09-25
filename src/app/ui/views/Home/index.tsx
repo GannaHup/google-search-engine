@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { EnumTabsResult } from '@/app/infrastructures/misc/constants/common'
 import { OPTIONS_SEARCH_GOOGLE } from '@/app/infrastructures/misc/constants/components'
-import { Options } from '@/app/infrastructures/misc/types/components/DropdownSelect'
+import { Options } from '@/app/infrastructures/misc/types/components/DropdownSelect.type'
 import {
   isOnlyWhiteSpace,
   serializeQuery
