@@ -7,7 +7,7 @@ const GoogleSEApi = axios.create({
   headers: {
     'X-User-Agent': 'desktop',
     'X-Proxy-Location': 'ID',
-    'X-RapidAPI-Key': 'c8b0fb49c9msh7bdb20b120da60bp1846d9jsna26f02a514b1',
+    'X-RapidAPI-Key': 'faaaff0e2bmshf88522177f785cfp170d0djsnfc64583d63cb',
     'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
   }
 })
